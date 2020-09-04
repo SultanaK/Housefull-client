@@ -134,9 +134,17 @@ input[type=submit] {
   color: black;
 }
 ul{
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+   align-content: space-between; 
+
   list-style: none;
 }
+li{
+  order: 4;
+}
 .DisplayImg{
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
 }

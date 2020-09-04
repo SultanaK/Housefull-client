@@ -13,9 +13,8 @@ export default class ListItem extends Component {
                     <ul className='ItemList'>
                         {ITEMS.map(item =>
                             <li key={item.id}>
-                                <Link to={`/item/${item.id}`}>    
-                                  {item.title} 
-                                    {' '}                                   
+                                <Link to={`/item/${item.id}`}>          
+                                    {`${item.title}`} 
                                 </Link>
                                 {<img className='DisplayImg'
                                     src={`${item.link}`} alt={`${item.title}`} />} 
