@@ -1,9 +1,21 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans",
+  sans-serif; 
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+ .App {
+  text-align: center;
+} 
+
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -13,26 +25,118 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  /* background-color: #ffffff; */
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   font-size: calc(10px + 2vmin);
+  color: white; 
+}
+
+ footer {
+  padding: 1% 0;
+  background-color: #aaa;
+
+}
+
+nav {
+  /* position: fixed; */
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+header {
+  /* padding: 2% 0; */ 
+  padding: 45px 15px;
+}
+
+section {
+  /* min-height: 100px; */
+  padding: 1px 1px;
+  padding: 1% 0; 
+  /* background-color: #bbb; */
+}
+
+/* section:nth-child(even) {
+  background-color: #ddd;
+} */
+p {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+/* p + p {
+  margin-top: 15px;
+} */
+
+form {
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 500px;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+label {
+  display: block;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #3b3b3b;
   color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  
+}
+/* .topnav {
+  overflow: hidden;
+  background-color: #333;
+} */
+.navbar-left{
+  float: left;
+}
+.navbar-right{
+  float: right;
 }
 
-.App-link {
-  color: #61dafb;
+.topnav  {
+  color: #f2f2f2;
+  text-align: center;
+  /* padding: 14px 16px; */
+  text-decoration: none;
+  font-size: 17px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ul{
+  list-style: none;
+}
+.DisplayImg{
+  height: 200px;
+  width: 200px;
 }
