@@ -27,7 +27,7 @@ export default class Nav extends Component {
                 <Link to='/login'>Login</Link>
                 <Link to='/registration'>Register</Link>
                 </section> 
-                <h3>Add new Item</h3>
+                
                 
 </div>
         )
