@@ -3,7 +3,7 @@ import ITEMS from './store'
 
 export default function ItemPage(props) {
     const item = ITEMS.find(p =>
-        p.id == props.match.params.itemId
+        p.id == (props.match.params.itemId)
     )|| {}
     console.log(item)
     return (

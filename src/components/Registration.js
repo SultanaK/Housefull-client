@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 export default class Registration extends Component {
     render() {
         return (
-             <section> 
+             <section className="additem"> 
                     
                 <h3>Register a new user</h3>
                      
-                    <form class='signup-form'>
+                    <form className='signup-form'>
                         <div>
                             <label htmlFor="first-name">First name</label>
                             <input placeholder='First Name' type="text" name='first-name' id='first-name'></input>
@@ -24,7 +24,10 @@ export default class Registration extends Component {
                             <label htmlFor="password">Password</label>
                             <input type="password" name='password' id='password'></input>
                         </div>
-                        <button type='submit'>Sign Up</button>
+                    <div className="additem__buttons">
+                        <button>Cancel</button>
+                        <button type="submit" >Signup</button>
+                    </div>  
                     </form>
             </section>     
             

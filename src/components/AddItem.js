@@ -24,7 +24,10 @@ export default class AddItem extends Component {
                         <label htmlFor="price">Price</label>
                         <input type="password" name='password' id='password'></input>
                     </div>
-                    <button type='submit'>Add Item</button>
+                    <div className="additem__buttons">
+                        <button>Cancel</button>
+                        <button type="submit" >Save</button>
+                    </div>  
                 </form>
             </section>    
         )
