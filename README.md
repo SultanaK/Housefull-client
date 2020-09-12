@@ -1,5 +1,5 @@
 ### live link
-[Static](https://housewill-client.vercel.app/)
+[Static client](https://housewill-client.vercel.app/)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
