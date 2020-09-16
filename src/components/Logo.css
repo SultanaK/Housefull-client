@@ -1,7 +1,7 @@
 
 .bg-img { 
   background-image: url("../home.jpg");
-  min-height: 10px; 
+  /* min-height: 10px;  */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,4 +29,4 @@
 }
 h1, h2{
     color:white;
-}
+} 

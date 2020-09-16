@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import { render } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
    render(
-    <BrowserRouter>
+    <MemoryRouter>
       <App />
-    </BrowserRouter>
+    </MemoryRouter>
   );
  /*  const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument(); */

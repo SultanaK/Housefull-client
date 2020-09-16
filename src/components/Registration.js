@@ -63,9 +63,7 @@ export default class Registration extends Component {
             return "Name must be at least 3 characters long";
         }
     }
-    /* validateEmail() {
-        const email = this.state.email.value.trim(); 
-    } */
+    
     validatePassword() {
         const password = this.state.password.value.trim();
         if (password.length === 0) {
@@ -88,7 +86,6 @@ export default class Registration extends Component {
 
     render() {
         const nameError = this.validateName();
-        //const emailError = this.validateEmail();
         const passwordError = this.validatePassword();
         const repeatPasswordError = this.validateRepeatPassword();
 

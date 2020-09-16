@@ -145,6 +145,10 @@ li{
   order: 4;
 }
 .DisplayImg{
-  height: 250px;
-  width: 250px;
+  height: 30%;
+  width: 30%;
+}
+.DilplayImg_item{
+  height: 35%;
+  width: 35%;
 }
