@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import './Logo.css'
-
+import Search from '../components/Search'
 
 export default class Header extends Component {
     render() {
@@ -13,11 +13,12 @@ export default class Header extends Component {
                         <h2> A place where you can donate your gently used household items</h2>
                         
                     </header>
-
-                    <input type="text" id="myInput" placeholder="Search  item you need...." title="Type in a name"/>
+                    
+                    {   /*  <input type="text" id="myInput" placeholder="Search  item you need...." title="Type in a name"/> */}
 
                        
-             </main> 
+                </main>
+                <Search history={this.props.history}/>   
         </div>
         )
     }

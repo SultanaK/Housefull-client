@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ITEMS from './store'
+import ITEMS from '../components/store'
 import { Link } from 'react-router-dom'
 export default class ListItem extends Component {
     render() {

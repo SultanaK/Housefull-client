@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
-import Category from './Category'
+import Category from '../components/Category'
 import ListItem from './ListItem'
-import Header from './Header'
+import Header from '../components/Header'
 
 export default class LandingPage extends Component {
     render() {

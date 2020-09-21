@@ -62,18 +62,22 @@ export default class AddItem extends Component {
     }
 
     handleChange = e => {
-        const { title, value } = e.target;
+       
+        const { name, value } = e.target;
+        
+        console.log(name)
+        console.log(value)
         this.setState(
-            { [title]: value.trim() },
+            { [name]: value.trim() },
         );
-        this.validateEntry(title, value.trim());
+        this.validateEntry(name, value.trim());
         this.updateErrorCount();
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-
-        if (this.state.errorCount > 0) return;
+console.log(e)
+       /*  if (this.state.errorCount > 0) return; */
 
         const { title, link, price, categoryId, description } = e.target;
         const item = {
@@ -122,7 +126,8 @@ export default class AddItem extends Component {
         if (this.state.appError) {
             return <p className="error">{this.state.appError}</p>;
         }
-
+        
+        
         return (
             <form className="add-item" onSubmit={this.handleSubmit}>
                 <legend>
@@ -135,10 +140,10 @@ export default class AddItem extends Component {
                     name="title"
                     id="title"
                     defaultValue=""
-                    onChange={this.handleChange}
+                     onChange={e=>this.handleChange(e)}
                 />
 
-                {errors.name.length > 0 && (
+                {errors.name && (
                     <ValidationError message={errors.name} />)}
                 <label htmlFor="linl"><h4>Image Link</h4></label>
                 <input
@@ -185,9 +190,9 @@ export default class AddItem extends Component {
                 <button
                     type="submit"
                     id="submit-btn"
-                    disabled={
+                    /* disabled={
                         this.state.formValid === false
-                    }
+                    } */
                 >Submit
                     </button>
 

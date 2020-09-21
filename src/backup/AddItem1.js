@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ValidationError from './ValidationError';
+import ValidationError from '../components/ValidationError';
 import config from '../config'
 import HousewillContext from '../HousewillContext'
 export default class AddItem extends Component {

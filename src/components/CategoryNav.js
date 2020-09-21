@@ -19,6 +19,7 @@ export default class CategoryNav extends React.Component {
         return (
             <nav className="nav">
                 <div className="categoryList">
+                    <h2>Categories</h2> 
                     {categorys.map(category =>
                         <li key={category.id} >
                             <NavLink to={`/category/${category.id}`} className={category.id == categoryId ? ' active' : 'not-active'} >

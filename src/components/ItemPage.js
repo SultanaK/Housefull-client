@@ -33,15 +33,14 @@ export default class ItemPage extends React.Component {
 
         const { items = [] } = this.context
         const { itemId } = this.props.match.params
-        console.log(items)
-        console.log(itemId)
+        
         const getItems = items
             .filter(item => item.id == itemId)
             .map(item => {
                 return (
                     <section className="items-display" key={item.id}>
                         <h3>{item.title}</h3>
-                        <img className ="item__page" src={item.link} alt={item.title}/> 
+                        <img className="DilplayImg_item" src={item.link} alt={item.title}/> 
                         
                        <h4> Price: $ {item.price}</h4>
                         <h4> Item Description: </h4>{item.description
@@ -62,7 +61,7 @@ export default class ItemPage extends React.Component {
                     id='delete-item-link-little'
                     onClick={() => this.handleDeleteItem(this.props.id, this.context.deleteItem)}>
                     Delete Item
-        </button>
+                </button>
             </div>
         )
     }
