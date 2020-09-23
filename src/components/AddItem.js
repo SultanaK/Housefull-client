@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HousewillContext from '../HousewillContext';
 import config from '../config';
 import ValidationError from './ValidationError';
-import PropTypes, { any } from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default class AddItem extends Component {
     static contextType = HousewillContext;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css';
-import Search from './components/Search'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -166,7 +165,7 @@ export default class App extends Component {
         <div className="App">
           <Logo />
           <Nav />
-          <switch>
+          <Switch>
           
             <Route exact path="/" component={Header} />
           <main className="mainpage">
@@ -186,7 +185,7 @@ export default class App extends Component {
               </HousewillError>
             </div>
             </main>
-            </switch>
+            </Switch>
         </div>
         <Footer />
       </HousewillContext.Provider>

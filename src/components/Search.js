@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import HousewillContext from '../HousewillContext';
 import config from '../config';
-import Item from './Item'
-import { Link } from 'react-router-dom'
-import SearchItemList from './SearchItemList'
 export default class Search extends Component {
     constructor(props) {
         super(props)

@@ -35,7 +35,7 @@ export default class ItemPage extends React.Component {
         const { itemId } = this.props.match.params
         
         const getItems = items
-            .filter(item => item.id == itemId)
+            .filter(item => item.id === Number(itemId))
             .map(item => {
                 return (
                     <section className="items-display" key={item.id}>
