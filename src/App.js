@@ -3,11 +3,9 @@ import './App.css';
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import { Route, Switch } from 'react-router-dom'
-
+import { Route} from 'react-router-dom'
 import Logo from './components/Logo'
 import Error from './backup/Error'
-
 import ItemPage from './components/ItemPage'
 import AddItem from './components/AddItem'
 import config from './config'
@@ -165,7 +163,7 @@ export default class App extends Component {
         <div className="App">
           <Logo />
           <Nav />
-          <Switch>
+          
           
             <Route exact path="/" component={Header} />
           <main className="mainpage">
@@ -185,7 +183,7 @@ export default class App extends Component {
               </HousewillError>
             </div>
             </main>
-            </Switch>
+            
         </div>
         <Footer />
       </HousewillContext.Provider>
