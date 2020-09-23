@@ -196,11 +196,11 @@ console.log(e)
                 >Submit
                     </button>
 
-                {this.state.errorCount !== null ? (
+             { /*   {this.state.errorCount !== null ? (
                     <p className="form-status">
                         Form is {this.state.formValid ? 'complete' : 'incomplete'}
                     </p>
-                ) : null}
+                ) : null} */}
 
             </form>
         );

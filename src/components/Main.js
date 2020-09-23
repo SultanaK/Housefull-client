@@ -35,7 +35,8 @@ export default class Main extends React.Component {
 					))}
 				</ul>
 				<Link id="add-item-link" to="/add-item">
-					Add New Item
+					<button className="add-new-item" type="submit">Add New Item </button>
+					
 				</Link>
 			</div>
 		);

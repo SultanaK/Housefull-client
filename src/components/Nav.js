@@ -12,8 +12,8 @@ export default class Nav extends Component {
                 </section>
                 <section className='navbar-right'>
                     <Link to='/'>Logout</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/registration'>Register</Link>
+                   {/* <Link to='/login'>Login</Link>
+        <Link to='/registration'>Register</Link>*/}
                 </section>
 
 

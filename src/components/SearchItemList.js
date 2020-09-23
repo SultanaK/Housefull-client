@@ -28,9 +28,13 @@ export default class SearchItemList extends Component {
                         ))
                 }
                 </ul>
+                {/* <Link id="add-item-link" to="/add-item">
+                   <button className ="add-new-item">  Add New Item </button>
+            </Link>  */}
                 <Link id="add-item-link" to="/add-item">
-                    Add New Item
-				</Link> 
+                    <button className="add-new-item" type="submit">Add New Item </button>
+
+                </Link>
             </div>
         )
     }

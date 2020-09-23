@@ -52,7 +52,7 @@ export default class Search extends Component {
     render() {
         console.log(this.context.searchItems)
         return (
-            <div className="search_item"> 
+            <div className="search_item_form"> 
                 <form onSubmit = { e =>  this.handleSubmit(e) }>
                     <input type="text" defaultValue="baby" name="search" placeholder="Search your Items"/>
                    <button type="submit">Submit</button> 
