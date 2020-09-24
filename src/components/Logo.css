@@ -1,12 +1,18 @@
-.bg-img { 
-  background-image: url("../home.jpg");
-  /* min-height: 10px;  */
+.bg-img {
+  background:  
+    linear-gradient(
+      rgba(247, 244, 244, 0.45), 
+      rgba(78, 77, 77, 0.45)
+    ), 
+    url(../home.jpg);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
 
+    }
+ 
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -17,7 +23,7 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 4px 6px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -26,6 +32,41 @@
   background-color: #ddd;
   color: black;
 }
-h1, h2{
-    color:white;
+.app_header{
+  font-size: 48px;
+  background: -webkit-linear-gradient(#eee,rgb(247, 244, 244));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+text-shadow: 3px 4px;
+animation: move-in-steps 8s infinite;
+
+} 
+p{
+  font-size: 18px;
+  background: -webkit-linear-gradient(rgb(7, 6, 7), rgb(7, 7, 7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+h5{
+    font-size: 30px;
+  background: -webkit-linear-gradient(rgb(247, 245, 245), rgb(245, 243, 243));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px;
+
+
+}
+@media screen and (max-width: 992px) {
+  .app_header {
+    font-weight:30px
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+ @media screen and (max-width: 600px) {
+  .App-logo {
+	height: 18vmin;
+	
+}
 } 

@@ -22,8 +22,8 @@ export default class Main extends React.Component {
 		return (
 			<div className="mainpage__main">
 				<ul className="itemList">
-					{itemsForCategory.map((item) => (
-						<li key={item.index}>
+					{itemsForCategory.map((item,i) => (
+						<li key={i}>
 							<Item
 								title={item.title}
 								itemId={item.id}
@@ -34,10 +34,13 @@ export default class Main extends React.Component {
 						</li>
 					))}
 				</ul>
+				<div className="button_center">
+				
 				<Link id="add-item-link" to="/add-item">
 					<button className="add-new-item" type="submit">Add New Item </button>
 					
 				</Link>
+				</div>
 			</div>
 		);
 	}

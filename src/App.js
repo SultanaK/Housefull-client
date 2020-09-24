@@ -163,27 +163,24 @@ export default class App extends Component {
         <div className="App">
           <Logo />
           <Nav />
-          
-          
-            <Route exact path="/" component={Header} />
+          <Route exact path="/" component={Header} />
           <main className="mainpage">
-            <div className="categorybar">
-              <HousewillError>
-                {this.renderCategorybar()}
-              </HousewillError>
-            </div>
-            <div className="main">
-              <HousewillError>
-                {this.renderMain()}
-              </HousewillError>
-            </div>
-            <div className="main">
-              <HousewillError>
-                {this.renderSearch()}
-              </HousewillError>
-            </div>
-            </main>
-            
+              <div className="categorybar">
+                <HousewillError>
+                  {this.renderCategorybar()}
+                </HousewillError>
+              </div>
+              <div className="main">
+                <HousewillError>
+                  {this.renderMain()}
+                </HousewillError>
+              </div>
+              <div className="main">
+                <HousewillError>
+                  {this.renderSearch()}
+                </HousewillError>
+              </div>
+            </main>           
         </div>
         <Footer />
       </HousewillContext.Provider>

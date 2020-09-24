@@ -1,8 +1,9 @@
-.Footer {
+.footer {
   font-size: 10pt;
   background-color: #424040;
   color: #e0dfda;
- /* position: fixed; */
+ /* position: fixed;  */
  width: 100%; 
-  bottom: 0;
+ z-index: 0;
+ bottom: 0; 
 }

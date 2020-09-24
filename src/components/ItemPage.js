@@ -58,7 +58,7 @@ export default class ItemPage extends React.Component {
                 {getItems}
                 <button
                     type="button"
-                    id='delete-item-link-little'
+                    id='delete-item-link-little' className="delete-item-link-little"
                     onClick={() => this.handleDeleteItem(this.props.id, this.context.deleteItem)}>
                     Delete Item
                 </button>

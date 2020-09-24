@@ -10,11 +10,11 @@ export default class Nav extends Component {
                     <Link to='/contact'>Contact</Link>
                     <Link to='/about'>About</Link>
                 </section>
-                <section className='navbar-right'>
+                { /* <section className='navbar-right'>
                     <Link to='/'>Logout</Link>
-                   {/* <Link to='/login'>Login</Link>
-        <Link to='/registration'>Register</Link>*/}
-                </section>
+                    <Link to='/login'>Login</Link>
+        <Link to='/registration'>Register</Link>
+        </section> */}
 
 
             </div>
