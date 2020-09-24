@@ -1,9 +1,10 @@
 .footer {
   font-size: 10pt;
-  background-color: #424040;
+  background-color: #a19f9f;
   color: #e0dfda;
- /* position: fixed;  */
+ position: relative; 
  width: 100%; 
- z-index: 0;
- bottom: 0; 
+ height: 2.95em;
+ bottom: 0;
+  
 }

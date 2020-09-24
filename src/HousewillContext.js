@@ -6,7 +6,9 @@ const HousewillContext = React.createContext({
     deleteItem: () => { },
     addItem: () => { },
     setSearchItems:()=>{} ,
-    searchItems:[]
+    searchItems: [],
+    updateItems: [],
+   setUpdateItems:()=>{}
 })
 
 export default HousewillContext;

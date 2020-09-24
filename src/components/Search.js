@@ -45,11 +45,9 @@ export default class Search extends Component {
 		console.log(this.context.searchItems);
 		return (
 			<div className="search_item_form">
-                <label aria-label="Search" id="search-Item-lebel">Search Item of your choice</label>
-                
-				<form onSubmit={(e) => this.handleSubmit(e)} htmlFor="submit-form">
-					
-                    <input type="text" defaultValue="baby" name="search" placeholder="Search your Items" aria-label="Search"/>
+            <form onSubmit={(e) => this.handleSubmit(e)} htmlFor="submit-form">
+                <label aria-label="Search" id="search-Item-lebel">Search item of your choice</label>
+                    <input type="text" defaultValue="table" name="search" placeholder="Search your Items" aria-label="Search" required/>
 					
 					<button type="submit">Submit</button>
                 </form>

@@ -209,3 +209,7 @@ button.add-new-item:active {
 		padding-bottom: 10px;
 	}
 }
+contact.footer{
+	z-index: 0;
+	position: fixed;
+}

@@ -17,7 +17,7 @@ export default class SearchItemList extends Component {
         return (
             <div className="search-item">
                 <ul className="search_item_result" >
-                    {searchItems &&
+                    {searchItems.length > 0 &&
                         searchItems.map((item,i) => (
                             <li key={i}>
                                 <Item
@@ -27,7 +27,7 @@ export default class SearchItemList extends Component {
                                     price={item.price}/> 
                             </li>
                         ))
-                } 
+                }  
                 </ul>
                 {/* <Link id="add-item-link" to="/add-item">
                    <button className ="add-new-item">  Add New Item </button>

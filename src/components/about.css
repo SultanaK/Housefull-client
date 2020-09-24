@@ -1,0 +1,8 @@
+#about_container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#about_waraper {
+  padding-bottom: 1.5rem;    /* Footer height */
+}

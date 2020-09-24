@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import { Route} from 'react-router-dom'
 import Logo from './components/Logo'
-import Error from './backup/Error'
+import Error from './components/Error'
 import ItemPage from './components/ItemPage'
 import AddItem from './components/AddItem'
 import config from './config'
@@ -14,11 +14,15 @@ import CategoryNav from './components/CategoryNav'
 import HousewillContext from './HousewillContext'
 import HousewillError from './HousewillError'
 import SearchItem from './components/SearchItemList'
+import UpdateItem from './components/UpdateItem'
+import Contact from './components/Contact'
+import About from './components/About'
 export default class App extends Component {
   state = {
     items: [],
     categorys: [],
-    searchItems:[]
+    searchItems: [],
+    updateItems:[]
     
   };
 
@@ -57,6 +61,11 @@ export default class App extends Component {
   setSearchItems = searchItems => {
      this.setState({
      searchItems: searchItems
+   })
+  }
+  setUpdateItems = updateItems => {
+    this.setState({
+     updateItems: updateItems
    })
  } 
   handleDeleteItem = itemId => {
@@ -111,6 +120,15 @@ export default class App extends Component {
       </>
     )
   }
+  
+  renderError() {
+    return (
+      <>
+        <Route  path="*" component={Error}
+        />
+      </>
+    )
+  }
   renderMain() {
     return (
       <>
@@ -128,6 +146,9 @@ export default class App extends Component {
           render={routeProps => <ItemPage {...routeProps} onDelete={this.handleDeleteItem} />}
         />
         <Route path="/add-item" component={AddItem} />
+        <Route path="/item/update:itemId/update" component={UpdateItem} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
       </>
     );
   }
@@ -156,7 +177,9 @@ export default class App extends Component {
       addErrorItems: this.addErrorItems,
       itemsError: this.itemsError,
       setSearchItems: this.setSearchItems,
-      searchItems:this.state.searchItems
+      searchItems: this.state.searchItems,
+      setUpdateItems: this.setUpdateItems,
+      updateItems: this.state.updateItems
     }
     return (
       <HousewillContext.Provider value={contextValue}>
@@ -179,11 +202,13 @@ export default class App extends Component {
                 <HousewillError>
                   {this.renderSearch()}
                 </HousewillError>
-              </div>
+            </div>
+            
             </main>           
         </div>
         <Footer />
-      </HousewillContext.Provider>
+        </HousewillContext.Provider>
+        
     )
   }
 }
