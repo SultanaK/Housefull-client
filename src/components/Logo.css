@@ -33,7 +33,7 @@
   color: black;
 }
 .app_header{
-  font-size: 48px;
+  font-size: 58px;
   background: -webkit-linear-gradient(#eee,rgb(247, 244, 244));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,7 +57,7 @@ h5{
 
 
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 400px) {
   .app_header {
     font-weight:30px
   }
