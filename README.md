@@ -4,69 +4,40 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Lost Puppers
 
-In the project directory, you can run:
+https://housewill-client.vercel.app/
 
-### `yarn start`
+API Documentation:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Link: https://github.com/SultanaK/Housewill-Api
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+POST Features: - '/add-item' is made for users to add new item - 
 
-### `yarn test`
+GET Features: - '/items/:item_id' accesses the specific logged in users profile - '/items' displays all the items - '/pups/:id' shows a personal page of the specific item - '/items/:item_id ^^^
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+DELETE Feauture: - '/items/:item_id' deletes a certain pup listing
 
-### `yarn build`
+PATCH Feature: - '/items/:id' allows updates to the pup name and description
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Image]('')
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This application is made for users who want to sell their gently used item and want to make a listing for the community to keep an eye out. Users are able to create and login into their personal accounts. They can view other listings items and for others to see where the item was last seen or any other information. Once a item is created, the owner is still able edit descriptions. They're private and public routes in the application that only allows signed up users to see certain information that the public cannot view.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to get started?
 
-### `yarn eject`
+Simple! You start by searching item of your choice and by find item by category. It's not complicated at all. You can then go to the item page and find items and contact seller or make your own listing by adding new item by clicking "ADD NEW ITEM". This site was made for all people of all ages.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For Developers or Any Users:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technologies used?
 
-## Learn More
+ Front-End: - 
+Javascript - React - React-Router-Dom - History - Context - CSS - Testing with: - Enzyme && Adapter && toJson - Shallow
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###Back-End: - 
+Express - Morgan - Cors - Helmet - bcryptjs - jsonwebtoken - Nodemon - Knex - dotenv - Testing with: - Chai - Mocha - Supertest - pg - Treeize - Xss
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
