@@ -19,9 +19,9 @@ export default class Item extends React.Component {
                 <div key={this.props.id}>
                     <Link to={`/item/${this.props.itemId}`}>
                         <h3>{this.props.title}</h3>
-                        <p>{this.props.link}</p>
+                        <p id="DilplayImg_item_id">{this.props.link}</p>
                         <p>{this.props.description}</p>
-                        <p>{this.props.price}</p>
+                        <p>${this.props.price}</p>
                     </Link>
                     
 

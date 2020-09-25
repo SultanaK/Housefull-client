@@ -34,7 +34,8 @@
 }
 .app_header{
   font-size: 58px;
-  background: -webkit-linear-gradient(#eee,rgb(247, 244, 244));
+  max-width: 600px;
+  /* background: -webkit-linear-gradient(#eee,rgb(247, 244, 244)); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 text-shadow: 3px 4px;
@@ -49,8 +50,11 @@ p{
 
 }
 h5{
-    font-size: 30px;
-  background: -webkit-linear-gradient(rgb(247, 245, 245), rgb(245, 243, 243));
+     font-size: 40px;
+     margin: 0 auto;
+    max-width: 600px;
+    color: whitesmoke;
+ /*  background: -webkit-linear-gradient(rgb(247, 245, 245), rgb(245, 243, 243)); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px;

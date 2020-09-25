@@ -19,11 +19,11 @@ export default class CategoryNav extends React.Component {
         return (
             <nav className="nav">
                 <div className="categoryList">
-                <h2>Search Item by Categories</h2> 
+                 
                     <ul className="categoryListItem">                 
                     {categorys.map(category =>
                         <li className="category_title" key={category.id} >
-                            <NavLink to={`/category/${category.id}`} className={category.id === Number(categoryId) ? ' active' : 'not-active'} >
+                            <NavLink  to={`/category/${category.id}`} id ="category_id" className={category.id === Number(categoryId) ? ' active' : 'not-active'} >
                                 <h3>{category.category_name}</h3>
                             </NavLink>
                             {categoryDisplay}

@@ -1,7 +1,7 @@
 import React from 'react';
 import HousewillContext from '../HousewillContext';
 import config from '../config';
-
+import { Link } from 'react-router-dom';
 
 export default class ItemPage extends React.Component {
 
@@ -62,6 +62,14 @@ export default class ItemPage extends React.Component {
                     onClick={() => this.handleDeleteItem(this.props.id, this.context.deleteItem)}>
                     Delete Item
                 </button>
+                { /* <div className="button_center">
+
+                    <Link id="update-item-link" to={`/update-item/${this.props.id}`}>
+                        <button className="update-new-item" type="submit" 
+                        > Edit Item </button>
+
+                    </Link>
+        </div> */}
             </div>
         )
     }

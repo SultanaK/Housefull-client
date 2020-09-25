@@ -22,7 +22,7 @@ export default class App extends Component {
     items: [],
     categorys: [],
     searchItems: [],
-    updateItems:[]
+    updateItem:[]
     
   };
 
@@ -63,10 +63,16 @@ export default class App extends Component {
      searchItems: searchItems
    })
   }
-  setUpdateItems = updateItems => {
-    this.setState({
-     updateItems: updateItems
-   })
+  setUpdateItem = updateItem => {
+    const newItems = this.state.items.map(itm =>
+      (itm.id === updateItem.id)
+        ? updateItem
+               : itm
+           )
+       this.setState({
+ items: newItems
+         })
+
  } 
   handleDeleteItem = itemId => {
     const newItems = this.state.items.filter(item => {
@@ -146,7 +152,7 @@ export default class App extends Component {
           render={routeProps => <ItemPage {...routeProps} onDelete={this.handleDeleteItem} />}
         />
         <Route path="/add-item" component={AddItem} />
-        <Route path="/item/update:itemId/update" component={UpdateItem} />
+        <Route path="/update-item/:itemId" component={UpdateItem} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
       </>
@@ -178,8 +184,9 @@ export default class App extends Component {
       itemsError: this.itemsError,
       setSearchItems: this.setSearchItems,
       searchItems: this.state.searchItems,
-      setUpdateItems: this.setUpdateItems,
-      updateItems: this.state.updateItems
+      setUpdateItem: this.setUpdateItem,
+      updateItem: this.state.updateItem,
+      updateItemId:this.state.updateItemId
     }
     return (
       <HousewillContext.Provider value={contextValue}>
