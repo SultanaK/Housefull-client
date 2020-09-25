@@ -4,15 +4,11 @@ export default function Contact() {
     return (
         <div id="contact_container">
                     
-            <ul>
-                <li>Address: </li>
-                <li>Email: housewill@email.com</li>
-                <p>Contact us for more information:</p>
-                <li>Mobile: 830-800-000</li>
-            </ul>
-            
-                 
-
+            <h5>Let us know how to improve</h5>
+            <title>
+                  
+                <iframe title="contact-us" id ="contact" name="contact-us" src="https://docs.google.com/forms/d/e/1FAIpQLSc-uHUPImmRxscZCq_p8aGZW-ewN2Q4O2-Ad1hKPhJTB0ksZw/viewform?embedded=true" className="survey" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>  
+            </title>
         </div>
     )
 }
