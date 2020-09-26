@@ -1,7 +1,7 @@
 import React from 'react';
 import HousewillContext from '../HousewillContext';
 import config from '../config';
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 
 export default class ItemPage extends React.Component {
 

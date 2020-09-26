@@ -3,7 +3,6 @@ import HousewillContext from '../HousewillContext';
 import config from '../config';
 import ValidationError from './ValidationError';
 import PropTypes from 'prop-types';
-
 export default class UpdateItem extends Component {
     static contextType = HousewillContext;
    
@@ -32,7 +31,7 @@ export default class UpdateItem extends Component {
 
     componentDidMount() {
           const upadateItemId = this.props.match.params.itemId 
-        fetch(`https://localhost:8000/api/items/${upadateItemId}` , {
+        fetch(`config/${upadateItemId}` , {
 method: 'GET'
               })
     .then(/* some content omitted */)

@@ -152,7 +152,8 @@ export default class App extends Component {
           render={routeProps => <ItemPage {...routeProps} onDelete={this.handleDeleteItem} />}
         />
         <Route path="/add-item" component={AddItem} />
-        <Route path="/update-item/:itemId" component={UpdateItem} />
+          <Route path="/update-item/:itemId" component={UpdateItem} /> 
+          
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
       </>
@@ -191,7 +192,7 @@ export default class App extends Component {
     return (
       <HousewillContext.Provider value={contextValue}>
         <div className="App">
-          <Logo />
+          
           <Nav />
           <Route exact path="/" component={Header} />
           <main className="mainpage">
