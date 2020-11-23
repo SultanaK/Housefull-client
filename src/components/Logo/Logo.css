@@ -4,7 +4,7 @@
       rgba(247, 244, 244, 0.45), 
       rgba(78, 77, 77, 0.45)
     ), 
-    url(../home.jpg);
+    url(../../home.jpg);
 
   background-position: center;
   background-repeat: no-repeat;

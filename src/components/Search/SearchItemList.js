@@ -1,5 +1,5 @@
-import HousewillContext from '../HousewillContext';
-import Item from '../components/Item'
+import HousewillContext from '../../HousewillContext';
+import Item from '../Item/Item'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 export default class SearchItemList extends Component {
@@ -16,16 +16,17 @@ export default class SearchItemList extends Component {
         return (
             <div className="search-item">
                 <ul className="search_item_result">
-                    {searchItems.length &&
+                     {searchItems.length ?
                         searchItems.map(( item, i) => (
                             <li key={i}>
                                 <Item
                                     title={item.title}
                                     itemId={item.id}
                                     link={<img className="DisplayImg" src={item.link} alt={item.title} />}
-                                    price={item.price} />
+                                    price={item.price}
+                                    email={item.email}/>
                             </li>
-                        ))
+                        )): <div> Item not found</div>
                     }
                 </ul>
                 

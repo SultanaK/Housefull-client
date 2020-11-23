@@ -4,6 +4,8 @@
 }
 #about_text{
     color:black;
+    text-align: left;
+    font-size: 20px;
 }
 header_position{
     margin:0 auto;
@@ -11,18 +13,18 @@ header_position{
 #about_waraper {
   padding-bottom: 1.5rem;    
 } 
-h5{
-    font-weight: 20;
-}
+/* h5{
+    font-weight: 0;
+} */
 #about_header {
     background-color: white;
     position: relative;
     width: 100%;
     color: black;
     overflow: hidden;
-    font-size: 80px;
-    font-weight: 3500;
-    max-width: 200;
+    font-size: 40px;
+    font-weight: 500;
+    max-width: 100;
 }
 
 /* .Overlay_aboutUs {

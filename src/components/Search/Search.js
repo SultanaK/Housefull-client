@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import HousewillContext from '../HousewillContext';
-import config from '../config';
+import HousewillContext from '../../HousewillContext';
+import config from '../../config';
 export default class Search extends Component {
 	constructor(props) {
 		super(props);

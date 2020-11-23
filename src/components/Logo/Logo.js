@@ -1,5 +1,5 @@
 import React from 'react'
-import housewill from '../housewill-logo.png'
+import housewill from '../../housewill-logo.png'
 import './Logo.css'
 export default function Logo() {
     return (

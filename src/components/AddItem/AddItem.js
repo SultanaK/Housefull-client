@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import HousewillContext from '../HousewillContext';
-import config from '../config';
-import ValidationError from './ValidationError';
+import HousewillContext from '../../HousewillContext';
+import config from '../../config';
+import ValidationError from '../Error/ValidationError';
 import PropTypes from 'prop-types';
-export default class UpdateItem extends Component {
+
+export default class AddItem extends Component {
     static contextType = HousewillContext;
-   
-    
     constructor(props) {
         super(props)
         this.state = {
@@ -17,32 +16,19 @@ export default class UpdateItem extends Component {
             categoryId: '',
             description: '',
             price: '',
-            link: '',
+            email:'',
+            link:'',
             errors: {
                 categoryId:
                     'You must select a category',
-                title: 'You must enter a item title',
+                ttle: 'You must enter a item title',
                 description: 'You must enter a description',
                 link: 'You must enetr a image link',
-                price: 'You must eneter  price'
+                price:'You must eneter  price',
+                email:'Add your email address'
             }
         }
     }
-
-    componentDidMount() {
-          const upadateItemId = this.props.match.params.itemId 
-        fetch(`config/${upadateItemId}` , {
-method: 'GET'
-              })
-    .then(/* some content omitted */)
-        .then(responseData => {
-              this.setState({
-        /* fields state updates here */
-                  })
-        })
-    .catch(error => {/* some content omitted */ })
-    }
-
 
     updateErrorCount = () => {
         let errors = this.state.errors;
@@ -78,9 +64,9 @@ method: 'GET'
     }
 
     handleChange = e => {
-
+       
         const { name, value } = e.target;
-
+        
         console.log(name)
         console.log(value)
         this.setState(
@@ -89,25 +75,26 @@ method: 'GET'
         this.validateEntry(name, value.trim());
         this.updateErrorCount();
     }
-    
+
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e)
-        /*  if (this.state.errorCount > 0) return; */
+console.log(e)
+       /*  if (this.state.errorCount > 0) return; */
 
-        const { title, link, price, categoryId, description } = e.target;
+        const { title, link, price, email, categoryId, description } = e.target;
         const item = {
             title: title.value,
             link: link.value,
             price: price.value,
+            email: email.value,
             category_id: categoryId.value,
             description: description.value,
-
+            
         };
         this.setState({ appError: null });
-        
-        fetch(`${config.API_ENDPOINT}/items/${this.props.match.params.updateItemId}`, {
-            method: 'PATCH',
+
+        fetch(config.API_ITEMS, {
+            method: 'POST',
             body: JSON.stringify(item),
             headers: {
                 'content-type': 'application/json'
@@ -125,9 +112,10 @@ method: 'GET'
                 title.value = '';
                 link.value = '';
                 price.value = '';
+                email.value = '';
                 description.value = '';
                 categoryId.value = '';
-                this.context.updateItem(data);
+                this.context.addItem(data);
                 this.setState({ data });
                 this.props.history.push('/', data);
             })
@@ -142,11 +130,10 @@ method: 'GET'
         if (this.state.appError) {
             return <p className="error">{this.state.appError}</p>;
         }
-
-        const  { title, link, price, categoryId, description } = this.state
-
+        
+        
         return (
-            <form className="add-item" onSubmit={this.state.handleSubmit}>
+            <form className="add-item" onSubmit={this.handleSubmit}>
                 <legend>
                     <h3>Add Item</h3>
                 </legend>
@@ -156,8 +143,8 @@ method: 'GET'
                     className="add-item__title"
                     name="title"
                     id="title"
-                    value={title}
-                    onChange={e => this.handleChange(e)}
+                    defaultValue=""
+                     onChange={e=>this.handleChange(e)}
                 />
 
                 {errors.name && (
@@ -168,11 +155,11 @@ method: 'GET'
                     className="add-image__link"
                     name="link"
                     id="link"
-                    value={link}
+                    defaultValue=""
                     onChange={this.handleChange}
                 />
 
-                {errors.link.length > 0 && (
+                {errors.name > 0 && (
                     <ValidationError message={errors.link} />)}
                 <label htmlFor="price"><h4>Item Price in $:</h4></label>
                 <input
@@ -180,19 +167,30 @@ method: 'GET'
                     className="add-item__price"
                     name="price"
                     id="price"
-                    value={price}
+                    defaultValue=""
                     onChange={this.handleChange}
                 />
 
-                {errors.price.length > 0 && (
+                {errors.name> 0 && (
                     <ValidationError message={errors.price} />)}
-                <label htmlFor="content"><h4>Item Content</h4></label>
+                <label htmlFor="content"><h4>Item Description</h4></label>
                 <textarea
                     type="text"
                     className="add-tem__content"
                     name="description"
                     id="description"
-                    value={description}
+                    defaultValue=""
+                    onChange={this.handleChange}
+                />
+                {errors.name > 0 && (
+                    <ValidationError message={errors.email} />)}
+                <label htmlFor="content"><h4>Add your Email</h4></label>
+                <textarea
+                    type="text"
+                    className="add-tem__content"
+                    name="email"
+                    id="email"
+                    defaultValue=""
                     onChange={this.handleChange}
                 />
                 <select
@@ -207,13 +205,13 @@ method: 'GET'
                 <button
                     type="submit"
                     id="submit-btn"
-                /* disabled={
-                    this.state.formValid === false
-                } */
+                    /* disabled={
+                        this.state.formValid === false
+                    } */
                 >Submit
                     </button>
 
-                { /*   {this.state.errorCount !== null ? (
+             { /*   {this.state.errorCount !== null ? (
                     <p className="form-status">
                         Form is {this.state.formValid ? 'complete' : 'incomplete'}
                     </p>
@@ -225,6 +223,6 @@ method: 'GET'
 }
 
 
-UpdateItem.propTypes = {
+AddItem.propTypes = {
     history: PropTypes.any.isRequired
 }

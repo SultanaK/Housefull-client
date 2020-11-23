@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import HousewillContext from '../HousewillContext';
-import config from '../config';
-import ValidationError from './ValidationError';
+import HousewillContext from '../../HousewillContext';
+import config from '../../config';
+import ValidationError from '../Error/ValidationError';
 import PropTypes from 'prop-types';
-
-export default class AddItem extends Component {
+export default class UpdateItem extends Component {
     static contextType = HousewillContext;
+   
+    
     constructor(props) {
         super(props)
         this.state = {
@@ -16,17 +17,32 @@ export default class AddItem extends Component {
             categoryId: '',
             description: '',
             price: '',
-            link:'',
+            link: '',
             errors: {
                 categoryId:
                     'You must select a category',
-                ttle: 'You must enter a item title',
+                title: 'You must enter a item title',
                 description: 'You must enter a description',
                 link: 'You must enetr a image link',
-                price:'You must eneter  price'
+                price: 'You must eneter  price'
             }
         }
     }
+
+    componentDidMount() {
+          const upadateItemId = this.props.match.params.itemId 
+        fetch(`config/${upadateItemId}` , {
+method: 'GET'
+              })
+    .then(/* some content omitted */)
+        .then(responseData => {
+              this.setState({
+        /* fields state updates here */
+                  })
+        })
+    .catch(error => {/* some content omitted */ })
+    }
+
 
     updateErrorCount = () => {
         let errors = this.state.errors;
@@ -62,9 +78,9 @@ export default class AddItem extends Component {
     }
 
     handleChange = e => {
-       
+
         const { name, value } = e.target;
-        
+
         console.log(name)
         console.log(value)
         this.setState(
@@ -73,11 +89,11 @@ export default class AddItem extends Component {
         this.validateEntry(name, value.trim());
         this.updateErrorCount();
     }
-
+    
     handleSubmit = (e) => {
         e.preventDefault();
-console.log(e)
-       /*  if (this.state.errorCount > 0) return; */
+        console.log(e)
+        /*  if (this.state.errorCount > 0) return; */
 
         const { title, link, price, categoryId, description } = e.target;
         const item = {
@@ -86,12 +102,12 @@ console.log(e)
             price: price.value,
             category_id: categoryId.value,
             description: description.value,
-            
+
         };
         this.setState({ appError: null });
-
-        fetch(config.API_ITEMS, {
-            method: 'POST',
+        
+        fetch(`${config.API_ENDPOINT}/items/${this.props.match.params.updateItemId}`, {
+            method: 'PATCH',
             body: JSON.stringify(item),
             headers: {
                 'content-type': 'application/json'
@@ -111,7 +127,7 @@ console.log(e)
                 price.value = '';
                 description.value = '';
                 categoryId.value = '';
-                this.context.addItem(data);
+                this.context.updateItem(data);
                 this.setState({ data });
                 this.props.history.push('/', data);
             })
@@ -126,10 +142,11 @@ console.log(e)
         if (this.state.appError) {
             return <p className="error">{this.state.appError}</p>;
         }
-        
-        
+
+        const  { title, link, price, description } = this.state
+
         return (
-            <form className="add-item" onSubmit={this.handleSubmit}>
+            <form className="add-item" onSubmit={this.state.handleSubmit}>
                 <legend>
                     <h3>Add Item</h3>
                 </legend>
@@ -139,8 +156,8 @@ console.log(e)
                     className="add-item__title"
                     name="title"
                     id="title"
-                    defaultValue=""
-                     onChange={e=>this.handleChange(e)}
+                    value={title}
+                    onChange={e => this.handleChange(e)}
                 />
 
                 {errors.name && (
@@ -151,7 +168,7 @@ console.log(e)
                     className="add-image__link"
                     name="link"
                     id="link"
-                    defaultValue=""
+                    value={link}
                     onChange={this.handleChange}
                 />
 
@@ -163,7 +180,7 @@ console.log(e)
                     className="add-item__price"
                     name="price"
                     id="price"
-                    defaultValue=""
+                    value={price}
                     onChange={this.handleChange}
                 />
 
@@ -175,7 +192,7 @@ console.log(e)
                     className="add-tem__content"
                     name="description"
                     id="description"
-                    defaultValue=""
+                    value={description}
                     onChange={this.handleChange}
                 />
                 <select
@@ -190,13 +207,11 @@ console.log(e)
                 <button
                     type="submit"
                     id="submit-btn"
-                    /* disabled={
-                        this.state.formValid === false
-                    } */
+                
                 >Submit
                     </button>
 
-             { /*   {this.state.errorCount !== null ? (
+                { /*   {this.state.errorCount !== null ? (
                     <p className="form-status">
                         Form is {this.state.formValid ? 'complete' : 'incomplete'}
                     </p>
@@ -208,6 +223,6 @@ console.log(e)
 }
 
 
-AddItem.propTypes = {
+UpdateItem.propTypes = {
     history: PropTypes.any.isRequired
 }

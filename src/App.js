@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 import './App.css';
-import Nav from './components/Nav'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Nav from './components/Nav/Nav'
+import Header from './components/Header/Header'
 import { Route} from 'react-router-dom'
-import Logo from './components/Logo'
-import Error from './components/Error'
-import ItemPage from './components/ItemPage'
-import AddItem from './components/AddItem'
+import Error from './components/Error/Error'
+import ItemPage from './components/Item/ItemPage'
+import AddItem from './components/AddItem/AddItem'
 import config from './config'
-import Main from './components/Main'
-import CategoryNav from './components/CategoryNav'
+import Main from './components/Main/Main'
+import CategoryNav from './components/Category/CategoryNav'
 import HousewillContext from './HousewillContext'
 import HousewillError from './HousewillError'
-import SearchItem from './components/SearchItemList'
-import UpdateItem from './components/UpdateItem'
-import Contact from './components/Contact'
-import About from './components/About'
+import SearchItem from './components/Search/SearchItemList'
+import UpdateItem from './components/Update/UpdateItem'
+import Contact from './components/Contact/Contact'
+import About from './components/About/About'
 export default class App extends Component {
   state = {
     items: [],
@@ -153,7 +151,7 @@ export default class App extends Component {
         />
         <Route path="/add-item" component={AddItem} />
           <Route path="/update-item/:itemId" component={UpdateItem} /> 
-          
+          <Route path="/update-item/:itemId" component={UpdateItem} /> 
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
       </>
@@ -214,7 +212,7 @@ export default class App extends Component {
             
             </main>           
         </div>
-        <Footer />
+        
         </HousewillContext.Provider>
         
     )

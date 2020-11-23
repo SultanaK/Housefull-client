@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HousewillContext from '../HousewillContext';
-import Item from './Item';
+import HousewillContext from '../../HousewillContext';
+import Item from '../Item/Item';
 import PropTypes from 'prop-types';
 export default class Main extends React.Component {
 	static defaultProps = {
@@ -41,6 +41,7 @@ export default class Main extends React.Component {
 					
 				</Link>
 				</div>
+				 <footer>&#169; Animation Station {new Date().getFullYear()}</footer>
 			</div>
 		);
 	}
