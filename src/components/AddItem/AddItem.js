@@ -79,8 +79,6 @@ export default class AddItem extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-console.log(e)
-       /*  if (this.state.errorCount > 0) return; */
 
         const { title, link, price, email, categoryId, description } = e.target;
         const item = {
@@ -134,10 +132,12 @@ console.log(e)
         
         
         return (
-            <form className="add-item" onSubmit={this.handleSubmit}>
-                <legend>
-                    <h3>Add Item</h3>
-                </legend>
+           <div className="container">
+            
+           <legend className='add_item_heading'>
+               <h3>Add New Item of your choice</h3>
+           </legend>
+           <form className="add-item" onSubmit={this.handleSubmit}>
                 <label htmlFor="name"><h4>Item Name</h4></label>
                 <input
                     type="text"
@@ -196,7 +196,8 @@ console.log(e)
                 />
                 <select
                     id="categoryId"
-                    name="categoryId"
+                        name="categoryId"
+                        
                     value={this.state.categoryId}
                     onChange={this.handleChange}
                 >
@@ -218,7 +219,8 @@ console.log(e)
                     </p>
                 ) : null} */}
 
-            </form>
+                </form>
+                </div>
         );
     }
 }

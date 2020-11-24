@@ -33,20 +33,12 @@
   color: black;
 }
 .app_header{
+ text-align: center; 
   font-size: 58px;
   max-width: 600px;
-  /* background: -webkit-linear-gradient(#eee,rgb(247, 244, 244)); */
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-/* text-shadow: 3px 4px; */
-animation: move-in-steps 8s infinite;
-
 } 
 p{
   font-size: 18px;
-  /* background: -webkit-linear-gradient(rgb(7, 6, 7), rgb(7, 7, 7)); */
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */ 
 
 }
 h5{
@@ -54,10 +46,6 @@ h5{
      margin: 0 auto;
     max-width: 600px;
     color: whitesmoke;
- /*  background: -webkit-linear-gradient(rgb(247, 245, 245), rgb(245, 243, 243)); */
- /*  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  /* text-shadow: 2px 2px; */
 
 
 }
@@ -66,11 +54,11 @@ h5{
     font-weight:30px
   }
 }
-
-/* On screens that are 600px or less, set the background color to olive */
- @media screen and (max-width: 600px) {
-  .App-logo {
-	height: 18vmin;
-	
+@media screen and (max-width: 700px) {
+  app_header {
+    position:left;
+  }
 }
-} 
+
+
+  

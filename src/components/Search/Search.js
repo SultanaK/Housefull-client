@@ -36,9 +36,6 @@ export default class Search extends Component {
 				return res.json();
 			})
 			.then((items) => {
-				//this.setState({ searchItems: [...items] })
-				console.log(items);
-
 				this.context.setSearchItems(items);
 				this.props.history.push('/search');
 			});

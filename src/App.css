@@ -1,7 +1,9 @@
 * {
 	box-sizing: border-box;
 }
-
+lebel{
+	display: inline;
+}
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 20px;
@@ -148,10 +150,10 @@ a{
 	padding-right:10px;
 
 }
-h3{
+/* h3{
 	margin-top:15px;
 	margin-bottom: 15px;;
-}
+} */
 #category_id{
 	background-color: gray;
 	color:white;
@@ -167,6 +169,10 @@ h3{
 .DilplayImg_item {
 	height: 48%;
 	width: 45%;
+}
+#Display_description{
+	color: black;
+	background-color: black;
 }
 .DilplayImg_item_id{
 height: 500px;

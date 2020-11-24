@@ -11,8 +11,6 @@ export default class SearchItemList extends Component {
     static contextType = HousewillContext;
     render() {
         const { searchItems } = this.context
-
-        console.log(this.context.searchItems)
         return (
             <div className="search-item">
                 <ul className="search_item_result">
