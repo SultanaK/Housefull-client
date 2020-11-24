@@ -3,6 +3,7 @@ import HousewillContext from '../../HousewillContext';
 import config from '../../config';
 import ValidationError from '../Error/ValidationError';
 import PropTypes from 'prop-types';
+import  './AddItem.css'
 
 export default class AddItem extends Component {
     static contextType = HousewillContext;

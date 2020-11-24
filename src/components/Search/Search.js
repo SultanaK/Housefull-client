@@ -8,22 +8,25 @@ export default class Search extends Component {
 		this.state = {
 			searchItems: [],
 			items: [],
-			searchTerm: ''
+			searchTerm: '',
 		};
 	}
 	static contextType = HousewillContext;
-    
+
 	handleSubmit = (e) => {
 		e.preventDefault();
 
 		console.log(e.target.search.value);
 
-		fetch(`${config.API_ENDPOINT}/items/search?search=${e.target.search.value}`, {
-			method: 'GET',
-			headers: {
-				'content-type': 'application/json'
+		fetch(
+			`${config.API_ENDPOINT}/items/search?search=${e.target.search.value}`,
+			{
+				method: 'GET',
+				headers: {
+					'content-type': 'application/json',
+				},
 			}
-		})
+		)
 			.then((res) => {
 				if (!res.ok) {
 					return res.json().then((error) => {
@@ -42,18 +45,26 @@ export default class Search extends Component {
 	};
 
 	render() {
-		console.log(this.context.searchItems);
 		return (
-			<div className="search_item_form">
-            <form onSubmit={(e) => this.handleSubmit(e)} htmlFor="submit-form" className="search_item_form_align">
-                <label aria-label="Search" id="search-Item-lebel">Search item of your choice</label>
-                    <input type="text" defaultValue="table" name="search" placeholder="Search your Items" aria-label="Search" required/>
-					
-					<button type="submit">Submit</button>
-                </form>
-                
-               
+			<div className='search_item_form'>
+				<form
+					onSubmit={(e) => this.handleSubmit(e)}
+					htmlFor='submit-form'
+					className='search_item_form_align'>
+					<label aria-label='Search' id='search-Item-lebel'>
+						Search item of your choice
+					</label>
+					<input
+						type='text'
+						defaultValue='table'
+						name='search'
+						placeholder='Search your Items'
+						aria-label='Search'
+						required
+					/>
 
+					<button type='submit'>Submit</button>
+				</form>
 			</div>
 		);
 	}

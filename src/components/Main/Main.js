@@ -24,12 +24,11 @@ export default class Main extends React.Component {
 				<ul className="itemList">
 					{itemsForCategory.map((item,i) => (
 						<li key={i}>
-							<Item
+							<Item 
 								title={item.title}
 								itemId={item.id}
 								link={<img className="DisplayImg" src={item.link} alt={item.title} />}
 								price={item.price}
-								/*  description={item.description} */
 							/>
 						</li>
 					))}
