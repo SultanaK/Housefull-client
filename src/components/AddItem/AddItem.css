@@ -4,6 +4,7 @@
 form {
   left:30%;
   text-align: center;
+  margin :0;
   
 }
 h3{
@@ -14,19 +15,20 @@ h3{
   font-size: 30px;
 }
 div > .add-item{
-      min-height: 120vh;
+      min-height: 100vh;
     height: auto;
     margin: auto;
  
 }
 .container{
-  width: 60%;
+  margin:0;
+  width: 70%;
   position: absolute;
   margin: auto;
-  padding: 10px;  
+   
 }
 .add-item{
-   width: 60%;
+  width: 70%; 
     height: 95vh;
     position: relative;
     text-align: center;

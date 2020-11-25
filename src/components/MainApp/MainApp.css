@@ -4,13 +4,13 @@
 lebel{
 	display: inline;
 }
-/* body {
+body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 20px;
 	color: #444;
 	text-align: center;
 	line-height: 1.5;
-} */
+}
 .App {
 	text-align: center;
 }

@@ -134,10 +134,10 @@ export default class AddItem extends Component {
         return (
            <div className="container">
             
+           <form className="add-item" onSubmit={this.handleSubmit}>
            <legend className='add_item_heading'>
                <h3>Add New Item of your choice</h3>
            </legend>
-           <form className="add-item" onSubmit={this.handleSubmit}>
                 <label htmlFor="name"><h4>Item Name</h4></label>
                 <input
                     type="text"
