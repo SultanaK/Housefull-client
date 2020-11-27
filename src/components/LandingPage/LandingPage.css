@@ -1,0 +1,108 @@
+.banner__outer {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.banner,
+.Overlay {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.banner {
+	position: relative;
+	margin-top: 0;
+	background: url('../../images/home.jpg')
+		no-repeat fixed;
+	overflow: hidden;
+	color: white;
+}
+
+.Overlay {
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
+}
+
+.banner h2 {
+	font-size: 7rem;
+	margin: 20px;
+	padding: 0;
+}
+
+.banner p {
+	font-size: 2rem;
+	margin: 10px;
+	padding: 0;
+}
+
+button {
+	width: 200px;
+	height: 75px;
+	background-color: rgb(95, 148, 128);
+	font-size: 1.2rem;
+	font-weight: 600;
+	border-radius: 2px;
+	transition: all 0.9s;
+	border: none;
+	margin-top: 40px;
+}
+
+ button:hover {
+	cursor: pointer;
+	background-color: rgb(255, 121, 121);
+	color: white;
+}
+
+/* FOOTER */
+
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 16px 16px 24px;
+	color: white;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.banner {
+    background-color: antiquewhite;
+		 background: url('../../images/home.jpg')
+			no-repeat center center fixed; 
+		background-size: cover; 
+	}
+
+	.Overlay {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.banner h2 {
+		font-size: 3.3rem;
+		margin: 16px;
+	}
+
+	.banner p {
+		font-size: 1.2rem;
+		margin: 16px 48px;
+	}
+
+	.banner button {
+		width: 175px;
+		height: 60px;
+		margin: 36px auto;
+	}
+}

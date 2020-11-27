@@ -15,6 +15,8 @@ import SearchItem from './components/Search/SearchItemList'
 import UpdateItem from './components/Update/UpdateItem'
 import Contact from './components/Contact/Contact'
 import About from './components/About/About'
+import LandingPage from './components/LandingPage/LandingPage'
+import NotFound from './components/NotFound/NotFound'
 export default class App extends Component {
   state = {
     items: [],
@@ -124,6 +126,14 @@ export default class App extends Component {
       </>
     )
   }
+  renderLandingPage() {
+    return (
+      <>
+        <Route exact path="/" component={LandingPage}
+        />
+      </>
+    )
+  }
   
   renderError() {
     return (
@@ -137,7 +147,7 @@ export default class App extends Component {
     return (
       <>
 
-        {['/', '/category/:categoryId'].map(path => (
+        {['/main', '/category/:categoryId'].map(path => (
           <Route
             exact
             key={path}
@@ -162,7 +172,7 @@ export default class App extends Component {
     return (
       <>
 
-        {['/', '/category/:categoryId'].map(path => (
+        {['/main', '/category/:categoryId'].map(path => (
           <Route
             exact
             key={path}
@@ -193,7 +203,10 @@ export default class App extends Component {
       <HousewillContext.Provider value={contextValue}>
         <div className="App">
           <Nav />
-          <Route exact path="/" component={Header} />
+          <div>
+            {this.renderLandingPage()}
+            </div>
+           
           <main className="mainpage">
               <div className="categorybar">
                 <HousewillError>
@@ -211,8 +224,9 @@ export default class App extends Component {
                 </HousewillError>
             </div>
             
-            </main>           
-        </div>
+          </main>    
+          </div>
+          <Route component={NotFound} />
         
         </HousewillContext.Provider>
         

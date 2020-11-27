@@ -1,6 +1,5 @@
-export default {
-    
-    
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {   
     API_ENDPOINT: `https://ancient-coast-06937.herokuapp.com/api`, 
         API_ITEMS: `https://ancient-coast-06937.herokuapp.com/api/items`,
             API_CATEGORYS: `https://ancient-coast-06937.herokuapp.com/api/categors`,   
