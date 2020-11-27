@@ -9,3 +9,11 @@ p{
 .app_header{
   text-align: center;
 }
+lebel{
+  text-align: center;
+}
+h1{
+  margin: 0;
+  font-weight: 500;
+  font-size: 75px;
+}

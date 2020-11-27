@@ -10,6 +10,7 @@ export default class Nav extends Component {
                     <Link to='/'>Home</Link>
                     <Link to='/contact'>Contact</Link>
                     <Link to='/about'>About</Link>
+                    <Link to='/how-to'>How-to-Use</Link>
                 </section>
                 
                 

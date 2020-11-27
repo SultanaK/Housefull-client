@@ -97,7 +97,7 @@ header_position{
         position: relative;
         color: black;
         overflow: unset;
-        padding: unset;
+       /*  padding: unset; */
     }
 
     /* ABOUT US */
@@ -120,7 +120,7 @@ header_position{
         font-size: 1.3rem;
         word-spacing: 2px;
         width: 100%;
-        text-align: left;
+         text-align: left; 
     }
 
     .Overlay_aboutUs img {
@@ -130,7 +130,7 @@ header_position{
         margin-left: auto;
         margin-right: auto;
         margin-top: 50px;
-        width: 75%;
+        width: 85%;
         top: initial;
         right: initial;
         border: 2px groove black;

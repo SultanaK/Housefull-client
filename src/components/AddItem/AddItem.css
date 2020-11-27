@@ -1,8 +1,8 @@
-/* body {
+body {
     text-align: center;
-} */
+} 
 form {
-  left:30%;
+   left:30%; 
   text-align: center;
   
 }
@@ -41,10 +41,8 @@ div > .add-item{
 } */
           
 textarea, select{
-
   background-color: #3b3b3b;
   color: white;
-  padding: 12px 20px;
-  
+  padding: 12px 20px; 
   cursor: pointer;
 }

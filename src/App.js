@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Nav from './components/Nav/Nav'
 import Header from './components/Header/Header'
-import { Route} from 'react-router-dom'
+import { Route, Switch} from 'react-router-dom'
 import Error from './components/Error/Error'
 import ItemPage from './components/Item/ItemPage'
 import AddItem from './components/AddItem/AddItem'
@@ -15,6 +15,8 @@ import SearchItem from './components/Search/SearchItemList'
 import UpdateItem from './components/Update/UpdateItem'
 import Contact from './components/Contact/Contact'
 import About from './components/About/About'
+import NotFound from './components/NotFound/NotFound'
+import HowTo from './components/HowToUse/HowToUse'
 export default class App extends Component {
   state = {
     items: [],
@@ -133,6 +135,14 @@ export default class App extends Component {
       </>
     )
   }
+  renderNotFound() {
+    return (
+      <>
+        <Route  component={NotFound}
+        />
+      </>
+    )
+  }
   renderMain() {
     return (
       <>
@@ -155,6 +165,9 @@ export default class App extends Component {
           <Route path="/update-item/:itemId" component={UpdateItem} /> 
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
+        <Route path="/how-to" component={HowTo} />
+        
+        
       </>
     );
   }
@@ -191,10 +204,10 @@ export default class App extends Component {
     return (
       
       <HousewillContext.Provider value={contextValue}>
-        
+        <Switch>
         <div className="App">
           <Nav />
-          <Route exact path="/" component={Header} />
+            <Route exact path="/" component={Header} /> 
           <main className="mainpage">
               <div className="categorybar">
                 <HousewillError>
@@ -213,8 +226,9 @@ export default class App extends Component {
             </div>
             
             </main>           
-        </div>
-        
+          </div>
+          
+       </Switch> 
         </HousewillContext.Provider>
         
     )

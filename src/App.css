@@ -1,9 +1,9 @@
 * {
 	box-sizing: border-box;
 }
-lebel{
-	display: inline;
-}
+ lebel{
+	display: flex;
+} 
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 20px;
@@ -36,12 +36,12 @@ nav {
 	right: 0;
 	z-index: 10;
 }
-header {
+/* header {
 	padding: 10px 20px;
-}
+} */
 
 section {
-	padding: 1px 1px;
+	/* padding: 1px 1px; */
 	padding: 1% 0;
 }
 
@@ -75,7 +75,7 @@ label {
 input[type=text],
 select {
 	width: 100%;
-	padding: 12px;
+/* 	padding: 12px; */
 	border: 1px solid #ccc;
 	margin-top: 6px;
 	margin-bottom: 16px;
