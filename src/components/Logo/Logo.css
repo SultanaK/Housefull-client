@@ -23,7 +23,7 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 4px 6px;
+  /* padding: 4px 6px; */
   text-decoration: none;
   font-size: 17px;
 }
@@ -32,6 +32,10 @@
   background-color: #ddd;
   color: black;
 }
+/* .navbar-left a:hover {
+  
+  color:rgb(175, 175, 121);
+} */
 .app_header{
  text-align: center; 
   font-size: 58px;

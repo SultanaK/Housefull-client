@@ -8,9 +8,6 @@ export default class Header extends Component {
 		return (
 			<div>
 				<main className='bg-img'>
-					{/* <label htmlFor='app_header' className='app_header'>
-						Housewill
-					</label> */}
 					<h1>Housewill</h1>
 					<h5 htmlFor='subHeading'>
 						A place where you can donate your gently used household items

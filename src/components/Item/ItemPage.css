@@ -1,0 +1,33 @@
+ p{
+  color: black;
+  font-size: 6px;
+  margin:0;
+  margin-left: 0;
+   text-align: center;
+    
+  
+} 
+#price{
+  font-size:20px;
+} 
+
+.items-display{
+	padding:0;
+} 
+.DisplayImg {
+	height: 200px;	
+	width: 45%; 
+} 
+ .DilplayImg_item {
+	height: 48%;
+	width: 45%;
+} 
+ #Display_description{
+	margin-left: 0;
+	color: black;
+	background-color: black;
+} 
+ .DilplayImg_item_id{
+height: 500px;
+	width: 35%;	
+} 

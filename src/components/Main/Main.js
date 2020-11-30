@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HousewillContext from '../../HousewillContext';
 import Item from '../Item/Item';
 import PropTypes from 'prop-types';
+import  './main.css'
 export default class Main extends React.Component {
 	static defaultProps = {
 		match: {
@@ -36,8 +37,7 @@ export default class Main extends React.Component {
 				<div className="button_center">
 				
 				<Link id="add-item-link" to="/add-item">
-					<button className="add-new-item" type="submit">Add New Item </button>
-					
+					<button className="add-new-item" type="submit">Add New Item </button>	
 				</Link>
 				</div>
 				 <footer>&#169; Animation Station {new Date().getFullYear()}</footer>

@@ -204,8 +204,7 @@ export default class AddItem extends Component {
 					</select>
 					<button
 						type='submit'
-						id='submit-btn'>
-						
+						id='submit-btn'>				
 						Submit
 					</button>
 				</form>

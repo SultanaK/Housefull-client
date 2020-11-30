@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Logo from '../../images/house-green.png'
 import './Nav.css'
 export default class Nav extends Component {
     render() {
@@ -7,17 +8,16 @@ export default class Nav extends Component {
 
             <div className='topnav'>
                 <section className='navbar-right'>
-                    <Link to='/'>Home</Link>
+                        
                     <Link to='/contact'>Contact</Link>
                     <Link to='/about'>About</Link>
-                    <Link to='/how-to'>How-to-Use</Link>
+                    <Link to='/how-to'>Help</Link>
                 </section>
-                
-                
-                
+                            
                 <section className='navbar-left'>
-                    <Link to='/'>Housewill</Link>
+                    <Link to='/'>Home
                     
+                    </Link> 
                 </section>
                 
 

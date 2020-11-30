@@ -17,3 +17,13 @@ h1{
   font-weight: 500;
   font-size: 75px;
 }
+@media screen and  (max-width: 700px) {
+  h1 {
+    font-size: 50px;
+  }
+
+ /*  .navbar-left {
+    float:right;
+  } */
+
+}

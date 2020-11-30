@@ -1,12 +1,14 @@
 import React from 'react'
-import housewill from '../../housewill-logo.png'
+import {Link} from 'react-router-dom'
+import houseLogo from '../../images/house-Black.png'
 import './Logo.css'
 export default function Logo() {
     return (
         
-            <nav className="logo">
-                <img src={housewill} className="App-logo" alt="logo" />
-            </nav> 
+            <div id="house-logo">
+               
+      <Link to="/"> Housewill</Link>
+            </div> 
         
     )
 }

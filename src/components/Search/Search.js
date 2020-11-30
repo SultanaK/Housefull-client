@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HousewillContext from '../../HousewillContext';
 import config from '../../config';
+import  './Search.css'
 export default class Search extends Component {
 	constructor(props) {
 		super(props);
@@ -47,7 +48,7 @@ export default class Search extends Component {
 				<form
 					onSubmit={(e) => this.handleSubmit(e)}
 					htmlFor='submit-form'
-					className='search_item_form_align'>
+					className='search_item_form_align example' >
 					<label aria-label='Search' id='search-Item-lebel'>
 						Search item of your choice
 					</label>
@@ -55,12 +56,12 @@ export default class Search extends Component {
 						type='text'
 						defaultValue='table'
 						name='search'
+						id='search'
 						placeholder='Search your Items'
 						aria-label='Search'
 						required
 					/>
-
-					<button type='submit'>Submit</button>
+					<button type='submit'> Submit </button>
 				</form>
 			</div>
 		);

@@ -1,6 +1,7 @@
 import React from 'react';
 import HousewillContext from '../../HousewillContext';
 import config from '../../config';
+import './ItemPage'
 /* import { Link } from 'react-router-dom';  */
 
 export default class ItemPage extends React.Component {
@@ -45,17 +46,17 @@ export default class ItemPage extends React.Component {
 			.filter((item) => item.id === Number(itemId))
 			.map((item) => {
 				return (
-					<section className='items-display' key={item.id}>
+					<div className='items-display' key={item.id}>
 						<h3>{item.title}</h3>
 						<img className='DilplayImg_item' src={item.link} alt={item.title} />
 
-						<h4> Price: $ {item.price}</h4>
-						<h4> Email: {item.email}</h4>
-						<h4> Item Description: </h4>
+						<p> Price: $ {item.price}</p>
+						<p> For details information, contact seller. <br />Email: {item.email}</p>
+						<p> Item Description: </p>
 						{item.description
 							.split('/\n \r|\n/')
 							.map((text, i) => <p key={i}>{text}</p>)}
-					</section>
+					</div>
 				);
 			});
 
@@ -70,14 +71,7 @@ export default class ItemPage extends React.Component {
 						this.handleDeleteItem(this.props.id, this.context.deleteItem)}>
 					Delete Item
 				</button>
-				{/* <div className="button_center">
-
-                    <Link id="update-item-link" to={`/update-item/${this.props.id}`}>
-                        <button className="update-new-item" type="submit" 
-                        > Edit Item </button>
-
-                    </Link>
-        </div>  */}
+				
 			</div>
 		);
 	}
