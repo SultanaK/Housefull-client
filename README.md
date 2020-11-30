@@ -93,7 +93,7 @@ Use command line to navigate into the project folder and run the following in te
 
 ### Local Server/Node scripts
 
-- clone repo https://github.com/SultanaK/AnimationStation-backend
+- clone repo https://github.com/SultanaK/Housewill-Api
 - To install the node project ===> npm install
 - To migrate the database ===> npm run migrate -- 1
 - To run Node server (on port 8000) ===> npm run dev
