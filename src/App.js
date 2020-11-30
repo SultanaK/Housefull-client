@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
 import Nav from './components/Nav/Nav'
+import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header/Header'
-import { Route} from 'react-router-dom'
 import Error from './components/Error/Error'
 import ItemPage from './components/Item/ItemPage'
 import AddItem from './components/AddItem/AddItem'
@@ -15,6 +15,8 @@ import SearchItem from './components/Search/SearchItemList'
 import UpdateItem from './components/Update/UpdateItem'
 import Contact from './components/Contact/Contact'
 import About from './components/About/About'
+import NotFound from './components/NotFound/NotFound'
+import HowTo from './components/HowToUse/HowToUse'
 export default class App extends Component {
   state = {
     items: [],
@@ -133,6 +135,14 @@ export default class App extends Component {
       </>
     )
   }
+  renderNotFound() {
+    return (
+      <>
+        <Route  component={NotFound}
+        />
+      </>
+    )
+  }
   renderMain() {
     return (
       <>
@@ -155,6 +165,10 @@ export default class App extends Component {
           <Route path="/update-item/:itemId" component={UpdateItem} /> 
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
+        <Route path="/how-to" component={HowTo} />
+       
+        
+        
       </>
     );
   }
@@ -191,30 +205,47 @@ export default class App extends Component {
     return (
       
       <HousewillContext.Provider value={contextValue}>
-        
+    
         <div className="App">
+          
           <Nav />
           <Route exact path="/" component={Header} />
           <main className="mainpage">
-              <div className="categorybar">
-                <HousewillError>
-                  {this.renderCategorybar()}
-                </HousewillError>
-              </div>
-              <div className="main">
-                <HousewillError>
-                  {this.renderMain()}
-                </HousewillError>
-              </div>
-              <div className="main">
-                <HousewillError>
-                  {this.renderSearch()}
-                </HousewillError>
-            </div>
-            
-            </main>           
-        </div>
+          <div className="categorybar">
+          <HousewillError>
+          {this.renderCategorybar()}
+          </HousewillError>
+          </div>
+          <div className="main">
+          <HousewillError>
+                 <Switch>
+                 {['/', '/category/:categoryId'].map(path => (
+          <Route
+            exact
+            key={path}
+            path={path}
+            component={Main}
+          />
+        ))}
         
+        <Route 
+          path="/item/:itemId"
+          render={routeProps => <ItemPage {...routeProps} onDelete={this.handleDeleteItem} />}
+        />
+        <Route path="/add-item" component={AddItem} />
+          <Route path="/update-item/:itemId" component={UpdateItem} /> 
+          <Route path="/update-item/:itemId" component={UpdateItem} /> 
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+                  <Route path="/how-to" component={HowTo} />
+                    <Route exact path="/search" component={SearchItem}/>
+                  <Route component={NotFound} />
+                  </Switch> 
+                </HousewillError>
+              </div> 
+            </main>  
+          </div>
+         
         </HousewillContext.Provider>
         
     )

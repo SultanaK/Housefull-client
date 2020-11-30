@@ -9,3 +9,21 @@ p{
 .app_header{
   text-align: center;
 }
+lebel{
+  text-align: center;
+}
+h1{
+  margin: 0;
+  font-weight: 500;
+  font-size: 75px;
+}
+@media screen and  (max-width: 700px) {
+  h1 {
+    font-size: 50px;
+  }
+
+ /*  .navbar-left {
+    float:right;
+  } */
+
+}

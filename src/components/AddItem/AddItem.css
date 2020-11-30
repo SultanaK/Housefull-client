@@ -1,8 +1,8 @@
-/* body {
+body {
     text-align: center;
-} */
+} 
 form {
-  left:30%;
+   left:30%; 
   text-align: center;
   
 }
@@ -14,37 +14,57 @@ h3{
   font-size: 30px;
 }
 div > .add-item{
-      min-height: 120vh;
-    height: auto;
-    margin: auto;
- 
+  top:20%;
+  min-height: 100vh;
+   
 }
-.container{
-  width: 60%;
-  position: absolute;
-  margin: auto;
-  padding: 10px;  
+.container{ 
+top: 30%;
+  left: -25%;
+  right:30%;   
+ position: absolute;  
 }
 .add-item{
-   width: 60%;
-    height: 95vh;
+  width: 100%; 
+    height: 130vh;
     position: relative;
     text-align: center;
     border: 2px solid black;
-    border-radius: 5px;
-   /*  */
   
 
 }
-/* select{
-  width: 500px;
-} */
-          
+         #submit-btn{
+           height: 40px;
+         } 
 textarea, select{
-
   background-color: #3b3b3b;
   color: white;
-  padding: 12px 20px;
-  
+  padding: 12px 20px; 
   cursor: pointer;
+}
+@media screen and  (max-width: 900px) {
+  .container{
+  top: 22%;
+  left: -25%;
+  right:30%; 
+  position: absolute;
+}
+div > .add-item{
+  min-height: 135vh;
+   
+}
+
+}
+@media screen and  (max-width: 300px) {
+  .container{
+  top: 28%;
+  left: -25%;
+  right:30%; 
+  position: absolute;
+}
+div > .add-item{
+  min-height: 150vh;
+   
+}
+
 }

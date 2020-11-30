@@ -1,0 +1,24 @@
+p {
+  margin: 0 auto;
+  	max-width: 650px; 
+} 
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	 align-content: space-between; 
+	list-style: none;
+	margin:0;
+	width: 100%;
+}
+a{
+	border:10px;
+	text-decoration: none;
+	padding:10px;
+	
+
+}
+#Display_description{
+	margin-left: 0;
+	color: black;
+	background-color: black;
+} 
