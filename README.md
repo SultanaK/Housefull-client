@@ -1,16 +1,69 @@
 # Housewill
 
 
-### live link
-[Static client](https://housewill-client.vercel.app/)
+This application is made for users who want to sell their gently used item and want to make a listing for the community to keep an eye out. Users are able to create and login into their personal accounts. They can view other listings items and for others to see where the item was last seen or any other information. Once a item is created, the owner is still able edit descriptions. They're private and public routes in the application that only allows signed up users to see certain information that the public cannot view.
 
-[Live](https://housewill.vercel.app/)
+## How to get started?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Simple! You start by searching item of your choice and by find item by category. It's not complicated at all. You can then go to the item page and find items and contact seller or make your own listing by adding new item by clicking "ADD NEW ITEM". This site was made for all people of all ages.
 
 
-https://housewill-client.vercel.app/
+# Features
+
+- Create a new posting
+- Search item from existing item
+- Delete any item
+- Communicate seller for for details information
+- Preview the item
+- Save the Item 
+
+## Technology
+
+- Front-End: HTML5, CSS3, JavaScript ES6, React
+- Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
+- Prodcution Environment: Heroku, Vercel
+
+## Working Prototype
+
+You can access a working prototype of the:
+
+  React(Client) app here:  
+    https://housewill-client.vercel.app/  
+    
+  Node/Express(Server) API here:  
+    https://github.com/SultanaK/Housewill-Api 
+
+## User Stories
+
+This app is for types of users: a REGISTERED USER and an UNREGISTERED USER
+
+
+
+
+## Screenshots
+
+Landing Page
+:-------------------------:
+![Landing Page](./documentation/screenshots/home.png)
+
+Category page
+:-------------------------:
+![Category Page](./documentation/screenshots/caregory.png)
+
+Search Page
+:-------------------------:
+![Search Page](./images/screenshots/search.png)
+
+Item Page  
+:-------------------------:
+![Edit Item Page](./images/screenshots/item.png)
+
+Add new Item
+:-------------------------:
+![User Dashboard Page](./images/screenshots/add-new.png)
+
+
+
 
 API Documentation:
 
@@ -22,26 +75,33 @@ GET Features: - '/items/:item_id' accesses the specific logged in users profile 
 
 DELETE Feauture: - '/items/:item_id' deletes a certain pup listing
 
-PATCH Feature: - '/items/:id' allows updates to the pup name and description
 
-[Image]('')
+## Responsive
 
-This application is made for users who want to sell their gently used item and want to make a listing for the community to keep an eye out. Users are able to create and login into their personal accounts. They can view other listings items and for others to see where the item was last seen or any other information. Once a item is created, the owner is still able edit descriptions. They're private and public routes in the application that only allows signed up users to see certain information that the public cannot view.
+App is built to be usable on mobile devices, as well as responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
-## How to get started?
+## Development Roadmap
 
-Simple! You start by searching item of your choice and by find item by category. It's not complicated at all. You can then go to the item page and find items and contact seller or make your own listing by adding new item by clicking "ADD NEW ITEM". This site was made for all people of all ages.
+This is v1.0 of the app, but future enhancements are expected to include:
 
-For Developers or Any Users:
+-  enable users to view and create post
+-  a marketplace to see other posting
 
+## How to run it
 
+Use command line to navigate into the project folder and run the following in terminal
 
-## Technologies used?
+### Local Server/Node scripts
 
- Front-End: - 
-Javascript - React - React-Router-Dom - History - Context - CSS - Testing with: - Enzyme && Adapter && toJson - Shallow
+- clone repo https://github.com/SultanaK/AnimationStation-backend
+- To install the node project ===> npm install
+- To migrate the database ===> npm run migrate -- 1
+- To run Node server (on port 8000) ===> npm run dev
+- To run tests ===> npm run test
 
-###Back-End: - 
-Express - Morgan - Cors - Helmet - bcryptjs - jsonwebtoken - Nodemon - Knex - dotenv - Testing with: - Chai - Mocha - Supertest - pg - Treeize - Xss
+### Local Client/React scripts
 
-
+- clone repo https://github.com/SultanaK/Housefull-client
+- To install the react project ===> npm install
+- To run react (on port 3000) ===> npm start
+- To run tests ===> npm run test
