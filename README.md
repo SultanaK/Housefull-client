@@ -1,7 +1,7 @@
 # Housewill
 
 
-This application is made for users who want to sell their gently used item and want to make a listing for the community to keep an eye out. Users are able to create and login into their personal accounts. They can view other listings items and for others to see where the item was last seen or any other information. Once a item is created, the owner is still able edit descriptions. They're private and public routes in the application that only allows signed up users to see certain information that the public cannot view.
+This application is made for users who want to sell their gently used hosehold item and want to make a listing for the community to keep an eye out. Users are able to create and post item. They can view other listings items and for others to see. 
 
 ## How to get started?
 
@@ -48,19 +48,19 @@ Landing Page
 
 Category page
 :-------------------------:
-![Category Page](./documentation/screenshots/caregory.png)
+![Category Page](./documentation/screenshots/category.png)
 
 Search Page
 :-------------------------:
-![Search Page](./images/screenshots/search.png)
+![Search Page](./documentation/screenshots/search.png)
 
 Item Page  
 :-------------------------:
-![Edit Item Page](./images/screenshots/item.png)
+![Edit Item Page](./documentation/screenshots/item.png)
 
 Add new Item
 :-------------------------:
-![User Dashboard Page](./images/screenshots/add-new.png)
+![User Dashboard Page](./documentation/screenshots/add-new.png)
 
 
 
