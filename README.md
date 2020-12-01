@@ -1,7 +1,7 @@
 # Housewill
 
 
-This application is made for users who want to sell their gently used hosehold item and want to make a listing for the community to keep an eye out. Users are able to create and post item. They can view other listings items and for others to see. 
+This application is made for users who want to sell their gently used household item and want to make a listing for the community to keep an eye out. Users are able to create and post item. They can view other listings items and for others to see. 
 
 ## How to get started?
 
