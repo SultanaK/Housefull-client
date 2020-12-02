@@ -46,7 +46,7 @@ export default class ItemPage extends React.Component {
 			.filter((item) => item.id === Number(itemId))
 			.map((item) => {
 				return (
-					<div className='items-display' key={item.id}>
+					<section className='items-display' key={item.id}>
 						<h3>{item.title}</h3>
 						<img className='DilplayImg_item' src={item.link} alt={item.title} />
 
@@ -56,7 +56,7 @@ export default class ItemPage extends React.Component {
 						{item.description
 							.split('/\n \r|\n/')
 							.map((text, i) => <p key={i}>{text}</p>)}
-					</div>
+					</section>
 				);
 			});
 

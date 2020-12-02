@@ -64,9 +64,6 @@ export default class AddItem extends Component {
 
 	handleChange = (e) => {
 		const { name, value } = e.target;
-
-		console.log(name);
-		console.log(value);
 		this.setState({ [name]: value.trim() });
 		this.validateEntry(name, value.trim());
 		this.updateErrorCount();
@@ -137,6 +134,7 @@ export default class AddItem extends Component {
 						name='title'
 						id='title'
 						defaultValue=''
+						required
 						onChange={(e) => this.handleChange(e)}
 					/>
 
@@ -150,6 +148,7 @@ export default class AddItem extends Component {
 						name='link'
 						id='link'
 						defaultValue=''
+						required
 						onChange={this.handleChange}
 					/>
 
@@ -163,6 +162,7 @@ export default class AddItem extends Component {
 						name='price'
 						id='price'
 						defaultValue=''
+						required
 						onChange={this.handleChange}
 					/>
 
@@ -176,6 +176,7 @@ export default class AddItem extends Component {
 						name='description'
 						id='description'
 						defaultValue=''
+						required
 						onChange={this.handleChange}
 					/>
 					{errors.name > 0 && <ValidationError message={errors.email} />}
@@ -188,11 +189,13 @@ export default class AddItem extends Component {
 						name='email'
 						id='email'
 						defaultValue=''
+						required
 						onChange={this.handleChange}
 					/>
 					<select
 						id='categoryId'
 						name='categoryId'
+						required
 						value={this.state.categoryId}
 						onChange={this.handleChange}>
 						<option value=''>Select a ctaegory</option>

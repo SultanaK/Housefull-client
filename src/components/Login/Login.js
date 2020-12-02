@@ -42,10 +42,6 @@ export default class Login extends Component {
     handleSubmit(event) {
         event.preventDefault();
         const { email, password, repeatPassword } = this.state;
-
-        console.log("Name: ", email.value);
-        console.log("Password: ", password.value);
-        console.log("Repeat Password: ", repeatPassword.value);
     }
 
     validateEmail() {

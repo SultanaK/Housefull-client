@@ -22,9 +22,9 @@ export default class Item extends React.Component {
 			<div className='item'>
 				<div key={this.props.id}>
 					<Link to={`/item/${this.props.itemId}`}>
-						<h3>{this.props.title}</h3>
+						<h3 >{this.props.title}</h3>
 						<p>{this.props.link}</p>
-						<p>{this.props.description}</p>
+						<p id='Display_description'>{this.props.description}</p>
 						<p>${this.props.price}</p>
 					</Link>
 				</div>

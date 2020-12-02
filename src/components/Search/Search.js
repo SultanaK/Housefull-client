@@ -17,7 +17,7 @@ export default class Search extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 
-		console.log(e.target.search.value);
+		
 
 		fetch(
 			`${config.API_ENDPOINT}/items/search?search=${e.target.search.value}`,

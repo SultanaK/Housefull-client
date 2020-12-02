@@ -21,7 +21,7 @@ Simple! You start by searching item of your choice and by find item by category.
 
 - Front-End: HTML5, CSS3, JavaScript ES6, React
 - Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
-- Prodcution Environment: Heroku, Vercel
+- Production Environment: Heroku, Vercel
 
 ## Working Prototype
 
